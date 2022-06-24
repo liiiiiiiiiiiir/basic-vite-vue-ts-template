@@ -40,6 +40,11 @@ module.exports = {
       "maxBOF": 0
     }],
     "vue/singleline-html-element-content-newline": "off",
+    "vue/order-in-components": "error", // 限制 Vue 文件属性的顺序
+    "vue/define-macros-order": "error", // 限制 defineProps 和 defineEmits的顺序
+    "vue/component-tags-order": ["error", { // 限制 Vue 文件结构顺序
+      "order": ["script:not([setup])", "script[setup]", "template", "style:not([scoped])", "style[scoped]"]
+    }],
     "vue/max-attributes-per-line": ["error", {
       "singleline": { "max": 5 },
       "multiline": { "max": 1 }
