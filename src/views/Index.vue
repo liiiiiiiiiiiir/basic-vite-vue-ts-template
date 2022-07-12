@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { useIntervalFn } from "@vueuse/core";
 import useIndexStore from "@/store";
+import { useIntervalFn } from "@vueuse/core";
 
 const indexStore = useIndexStore();
 const trans = computed(() => indexStore.trans);
