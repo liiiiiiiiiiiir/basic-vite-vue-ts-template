@@ -3,6 +3,7 @@ import legacy from "@vitejs/plugin-legacy"; // 兼容不支持esm的浏览器
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx"; // Vue支持JSX
+import Inspect from "vite-plugin-inspect";
 
 export default defineConfig({
   root: "./",
@@ -11,7 +12,8 @@ export default defineConfig({
     vueJsx(),
     legacy({
       targets: ["defaults", "not IE 11"]
-    })
+    }),
+    Inspect()
   ],
   resolve: {
     alias: {
